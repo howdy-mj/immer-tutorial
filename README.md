@@ -1,5 +1,7 @@
 # immer 튜토리얼
 
+> 벨로퍼트 리액트를 다루는 기술 12장
+
 ```js
 import produce from 'immer';
 const nextState = produce(originalState, (draft) => {
@@ -10,6 +12,7 @@ const nextState = produce(originalState, (draft) => {
 produce는 두가지 매개 변수를 받는데,
 첫 번째 매개변수는 수정하고 싶은 state를,
 두 번째 매개변수는 상태를 어떻게 업데이트할 지 정의하는 함수를 적는다.
+
 두 번째 함수 내부에서 원하는 값을 변경하면, produce 함수가 불변성 유지를 대신해주면서 새로운 상태를 생성해준다.
 
 ## useState의 함수형 업데이트랑 같이 쓰기
